@@ -8,17 +8,50 @@
 
 <style>
 
+    .container {
+        height: 600px;
+        width: 600px;
+        display: grid;
+        grid-template-columns: 300px 300px ;
+        grid-row: auto auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        justify-content: center;
+        margin: auto;
+
+    }
+    .ruter {
+        background-color: aquamarine;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+    }    
+
 
 </style>
 
 </head>
 <body>
-    <h1>Test test 123456789</h1>
-    <p>Enda en liten update</p>
-    
-    <p> Enda en liten test</p>
-    <p>jeg skriver her</p>
-
+   <div class="container">
+       <div class="ruter" id="marijaHobby" onclick="marijaRute1()">
+           test1
+       </div>
+       <div class="ruter">
+        test2
+    </div>
+    <div class="ruter">
+        test3
+    </div>
+    <div class="ruter">
+        test4
+    </div>
+   </div>
+<script>
+    function marijaRute1() {
+        document.getElementById('marijaHobby').innerHTML = 'text'
+    }
+</script>
 
 </body>
 </html>
