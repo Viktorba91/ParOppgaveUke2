@@ -1,57 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-<style>
+    <style>
+        .container {
+            height: 600px;
+            width: 600px;
+            display: grid;
+            grid-template-columns: 300px 300px;
+            grid-row: auto auto;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            justify-content: center;
+            margin: auto;
 
-    .container {
-        height: 600px;
-        width: 600px;
-        display: grid;
-        grid-template-columns: 300px 300px ;
-        grid-row: auto auto;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        justify-content: center;
-        margin: auto;
+        }
 
-    }
-    .ruter {
-        background-color: aquamarine;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        display: grid;
-    }    
-
-
-</style>
+        .ruter {
+            background-color: aquamarine;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: grid;
+        }
+    </style>
 
 </head>
+
 <body>
-   <div class="container">
-       <div class="ruter" id="marijaHobby" onclick="marijaRute1()">
-           test1
-       </div>
-       <div class="ruter">
-        test2
+    <div class="container">
+        <div class="ruter" id="marijaHobby" onclick="marijaTopLeft()">
+            Marija
+        </div>
+        <div class="ruter" id="viktorHobby" onclick="viktorTopRight()">
+            Viktor
+        </div>
+        <div class="ruter" id="marijaBilde" onclick="marijaBotLeft()">
+            <img src="marija_meme.jpg" id="marijaMeme" style="display: none;">
+            Marija
+        </div>
+        <div class="ruter" id="viktorBilde" onclick="viktorBotRight()">
+            Viktor
+        </div>
     </div>
-    <div class="ruter">
-        test3
-    </div>
-    <div class="ruter">
-        test4
-    </div>
-   </div>
-<script>
-    function marijaRute1() {
-        document.getElementById('marijaHobby').innerHTML = 'text'
-    }
-</script>
+    <script>
+        function marijaTopLeft() {
+            document.getElementById('marijaHobby').innerHTML = 'text'
+        }
+
+        function viktorTopRight() {
+            document.getElementById('viktorHobby').innerHTML = 'text'
+        }
+
+        function marijaBotLeft() {
+            document.getElementById('marijaBilde').innerHTML = 'text'
+            document.getElementById("marijaMeme").style.visibility = "visible";
+        }
+
+        function viktorBotRight() {
+            document.getElementById('viktorBilde').innerHTML = 'text'
+        }
+
+        function showPicture() {
+            document.getElementById('marijaMeme').style.display = "";
+        }
+
+    </script>
 
 </body>
+
 </html>
