@@ -28,6 +28,10 @@
             justify-content: center;
             display: grid;
         }
+
+        #marijaMeme {
+                height: 200px;
+        }
     </style>
 
 </head>
@@ -35,22 +39,24 @@
 <body>
     <div class="container">
         <div class="ruter" id="marijaHobby" onclick="marijaTopLeft()">
-            Marija
+            <p id="navn1">Marija</p>
         </div>
         <div class="ruter" id="viktorHobby" onclick="viktorTopRight()">
-            Viktor
+            <p id="navn2">Viktor</p>
         </div>
         <div class="ruter" id="marijaBilde" onclick="marijaBotLeft()">
-            <img src="marija_meme.jpg" id="marijaMeme" style="display: none;">
-            Marija
+            <img src="marija_meme.jpg" id="marijaMeme" style="display: none">
+            <p id="navn3">Marija</p>
         </div>
         <div class="ruter" id="viktorBilde" onclick="viktorBotRight()">
-            Viktor
+            <img src="marija_meme.jpg" id="marijaMeme" style="display: none">
+            <p id="navn4">Viktor</p>
         </div>
     </div>
     <script>
+         var viktorBildeOn = false ;
         function marijaTopLeft() {
-            document.getElementById('marijaHobby').innerHTML = 'text'
+            document.getElementById('marijaHobby').innerHTML = 'Marija trener ofte'
         }
 
         function viktorTopRight() {
@@ -58,18 +64,34 @@
         }
 
         function marijaBotLeft() {
-            document.getElementById('marijaBilde').innerHTML = 'text'
+            document.getElementById('marijaBilde').onclick = showPicture1()
             document.getElementById("marijaMeme").style.visibility = "visible";
         }
 
         function viktorBotRight() {
-            document.getElementById('viktorBilde').innerHTML = 'text';
+            if (viktorBildeOn = false) { 
+
+            document.getElementById('viktorBilde').onclick = showPicture2()
+            document.getElementById("marijaMeme").style.visibility = "visible";
+            viktorBildeOn = true ;
+            }
+            else 
+            document.getElementById('viktorBilde').onclick = showPicture2()
+            document.getElementById("marijaMeme").style.visibility = "hidden";
         }
 
-        function showPicture() {
+        function showPicture1() {
+            document.getElementById('navn3').innerHTML = "";
             document.getElementById('marijaMeme').style.display = "";
-            // document.getElementById("marijaMeme").reset();
+            
         }
+        function showPicture2() {
+            document.getElementById('navn4').innerHTML = "";
+            document.getElementById('marijaMeme').style.display = "";
+            
+        }
+           
+            
 
     </script>
 
