@@ -9,13 +9,13 @@
 
     <style>
         .container {
-            height: 600px;
-            width: 600px;
+            height: 440px;
+            width: 440px;
             display: grid;
-            grid-template-columns: 300px 300px;
+            grid-template-columns: 220px 220px;
             grid-row: auto auto;
-            grid-column-gap: 20px;
-            grid-row-gap: 20px;
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
             justify-content: center;
             margin: auto;
 
@@ -27,10 +27,18 @@
             align-items: center;
             justify-content: center;
             display: grid;
+            height: 210px;
+            width: 210px;
         }
 
         #marijaMeme {
-                height: 200px;
+                height: 210px;
+                width: 210px;
+        }
+
+        #viktorMeme {
+                height: 210px;
+                width: 210px;
         }
     </style>
 
@@ -49,35 +57,31 @@
             <p id="navn3">Marija</p>
         </div>
         <div class="ruter" id="viktorBilde" onclick="viktorBotRight()">
-            <img src="marija_meme.jpg" id="marijaMeme" style="display: none">
+            <img src="viktor_meme.jpeg" id="viktorMeme" style="display: none">
             <p id="navn4">Viktor</p>
         </div>
     </div>
     <script>
-         var viktorBildeOn = false ;
+         
         function marijaTopLeft() {
-            document.getElementById('marijaHobby').innerHTML = 'Marija trener ofte'
+            document.getElementById('marijaHobby').innerHTML = 'Marija liker å trene'
         }
 
         function viktorTopRight() {
-            document.getElementById('viktorHobby').innerHTML = 'text'
+            document.getElementById('viktorHobby').innerHTML = 'Viktor går turer i skogen og lytter til fuglekvitring'
         }
 
         function marijaBotLeft() {
+           
             document.getElementById('marijaBilde').onclick = showPicture1()
             document.getElementById("marijaMeme").style.visibility = "visible";
+           
         }
 
         function viktorBotRight() {
-            if (viktorBildeOn = false) { 
-
             document.getElementById('viktorBilde').onclick = showPicture2()
-            document.getElementById("marijaMeme").style.visibility = "visible";
-            viktorBildeOn = true ;
-            }
-            else 
-            document.getElementById('viktorBilde').onclick = showPicture2()
-            document.getElementById("marijaMeme").style.visibility = "hidden";
+            document.getElementById("viktorMeme").style.visibility = "visible";
+           
         }
 
         function showPicture1() {
@@ -87,11 +91,9 @@
         }
         function showPicture2() {
             document.getElementById('navn4').innerHTML = "";
-            document.getElementById('marijaMeme').style.display = "";
+            document.getElementById('viktorMeme').style.display = "";
             
-        }
-           
-            
+        }       
 
     </script>
 
